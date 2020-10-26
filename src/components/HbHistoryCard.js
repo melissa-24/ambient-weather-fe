@@ -18,13 +18,6 @@ function HistoryCard() {
       <>
       <div className='history'>
         <h2>Station's 30 Day History</h2>
-        {/* {data.map(device => 
-            <div className='data'>
-                <p>Date: {device.date}</p>
-                <p>Low Temp: {device.tempf}</p>
-                <p>Humidity: {device.humidity}</p>
-            </div>)
-        } */}
         {data.map( device => 
             <table>
                 <tr>

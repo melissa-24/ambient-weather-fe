@@ -21,8 +21,34 @@ body #main {
   justify-content: center;
   align-items: center;
 }
-body #main h1 {
+body #main header h1 {
   font-family: 'Crafty Girls', cursive;
+  text-align: center;
+}
+body #main header nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body #main header nav a {
+  font-family: 'The Girl Next Door', cursive;
+  padding: 0.5em;
+  font-size: 1.3em;
+}
+body #main .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .about h1 {
+  font-family: 'Crafty Girls', cursive;
+}
+body #main .about p {
+  font-family: 'The Girl Next Door', cursive;
+  width: 40%;
 }
 body #main .station {
   display: flex;
