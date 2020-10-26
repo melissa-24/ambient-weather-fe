@@ -10,14 +10,14 @@ function StationCard() {
       <>
       <div className='station'>
         <div className='data'>
-          {/* <StationName /> */}
+          <StationName />
         </div>
         <div className='current'>
           <CurrentTime />
         </div>
         <div className='conditions'>
           <h3>Current Conditions</h3>
-            {/* <CurrentCard /> */}
+            <CurrentCard />
         </div>
       </div>
       </>
