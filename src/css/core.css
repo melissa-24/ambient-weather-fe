@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Crafty Girls';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Crafty Girls Regular'), local('CraftyGirls-Regular'), url(https://fonts.gstatic.com/s/craftygirls/v10/va9B4kXI39VaDdlPJo8N_NvuQQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'The Girl Next Door';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('The Girl Next Door'), local('TheGirlNextDoor'), url(https://fonts.gstatic.com/s/thegirlnextdoor/v11/pe0zMJCIMIsBjFxqYBIcZ6_OI5oFHCYIVw.ttf) format('truetype');
+}
+body {
+  background-color: #87cefa;
+}
+body #main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main h1 {
+  font-family: 'Crafty Girls', cursive;
+}
+body #main .station {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .station .data h2 {
+  font-family: 'Crafty Girls', cursive;
+}
+body #main .station .data .location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body #main .station .data .location h3 {
+  font-family: 'The Girl Next Door', cursive;
+  padding: 0.5em;
+}
+body #main .station table {
+  border: 3px groove #2f4f4f;
+}
+body #main .station table tr th {
+  border: 1px solid #2f4f4f;
+  background-color: #b0c4de;
+  padding: 0.2em 1em;
+}
+body #main .station table tr td {
+  border: 1px solid #2f4f4f;
+  padding: 0.2em 1em;
+  text-align: center;
+}
+body #main .history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .history h2 {
+  font-family: 'Crafty Girls', cursive;
+}
+body #main .history table {
+  border: 3px groove #2f4f4f;
+}
+body #main .history table tr th {
+  border: 1px solid #2f4f4f;
+  background-color: #b0c4de;
+  padding: 0.5em 2em;
+}
+body #main .history table tr td {
+  border: 1px solid #2f4f4f;
+  padding: 0.2em 2em;
+  text-align: center;
+}
+body #main footer {
+  font-family: 'The Girl Next Door', cursive;
+}

@@ -1,17 +1,24 @@
 import React from 'react'
+import './css/core.css'
 
-import './App.css'
+import StationCard from './components/StationCard'
+import HistoryCard from './components/HistoryCard'
 
-class App extends React.Component  {
+function App() {
 
-  
-  render() {
     return (
       <>
-  
+      <h1>
+        Weather App
+      </h1>
+      <StationCard />
+      <HistoryCard />
+      <footer>
+        <p>Created by Melissa</p>
+        <p>&#169; 2020</p>
+      </footer>
       </>
     );
-  }
 };
 
 export default App;
