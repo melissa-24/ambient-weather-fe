@@ -1,65 +1,47 @@
 import React from 'react'
+import { Link, Switch, Route } from 'react-router-dom'
+import './css/core.css'
 
-import './App.css'
+import Home from './components/Home'
+import HbStationCard from './components/HbStationCard'
+import PjrStationCard from './components/PjrStationCard'
+// import DateCard from './components/DateCard'
+import HbHistoryCard from './components/HbHistoryCard'
 
-const App = () => {
-  return (
-    <div className="App">
-      {/* Remove everything from this line to line 37 */}
-      <div className="image-container">
-        <img
-          alt="Lambda loves our llamas!"
-          src="https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5dcda59e63bb6ae5c9282801_small-red-logo.png"
-        ></img>
-      </div>
-      <h2>
-        Welcome <p className="welcome-bottom">Lambda student!</p>
-      </h2>
-      <h4>Your React Application is Ready</h4>
-      <h4>Now go work your magic!</h4>
-      <p className="filler-text">This is filler, no need to keep it!</p>
-      <div className="footer">
-        <a
-          href="https://lambdaschool.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit the Lambda Llama home
-        </a>
-        <br />
-        <div>
-          <p>Created using Create-React-App</p>
-          <p>Modified and maintained by Lambda School graduate Zac Smith</p>
-          <p>
-            <a
-              href="https://github.com/mrzacsmith"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>{" "}
-            ::{" "}
-            <a
-              href="https://www.npmjs.com/~mrzacsmith"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NPM
-            </a>{" "}
-            ::{" "}
-            <a
-              href="https://twitter.com/mrzacsmith"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-          </p>
-        </div>
-      </div>
-      {/* Remove everything from line 8 to here */}
-    </div>
-  );
+function App() {
+
+    return (
+      <>
+      <header>
+        <h1>Family Weather</h1>
+        <nav>
+          <Link to='/'>Home</Link>
+          <Link to='/honeybee-station'>Melissa's Station</Link>
+          <Link to='/paynejr-station'>Payne JR's Station</Link>
+          <Link to='/honeybee-history'>Melissa's 30 Day Weather History</Link>
+        </nav>
+      </header>
+      <Switch>
+        <Route path='/honeybee-station'>
+          <HbStationCard />
+        </Route>
+        <Route path='/paynejr-station'>
+          <PjrStationCard />
+          {/* <DateCard /> */}
+        </Route>
+        <Route path='/honeybee-history'>
+          <HbHistoryCard />
+        </Route>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+      </Switch>
+      <footer>
+        <p>Created by Melissa</p>
+        <p>&#169; 2020</p>
+      </footer>
+      </>
+    );
 };
 
 export default App;
