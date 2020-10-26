@@ -11,8 +11,8 @@ function PWS() {
   useEffect(() => {
     axios
       .get(url)
-      // .then((res) => setData(res.data))
-      .then((res) => console.log(res.data))
+      .then((res) => setData(res.data))
+      // .then((res) => console.log(res.data))
       .catch((err) => console.error(err))
   }, [url])
 
@@ -26,14 +26,16 @@ function PWS() {
                 <th>Outside Temp:</th>
                 <th>Inside Temp:</th>
                 <th>Daily Rain:</th>
+                <th>Pressure:</th>
               </tr>
               {data.map(device => 
               <tr>
                 <td>{device.lastData.date.substr(5, 5)}-{device.lastData.date.substr(0, 4)}</td>
-                <td>{device.lastData.date.substr(11, 5)}</td>
+                <td>{device.lastData.date.substr(11, 5)} Zulu</td>
                 <td>{device.lastData.tempf}&#176;</td>
                 <td>{device.lastData.tempinf}&#176;</td>
                 <td>{device.lastData.dailyrainin}"</td>
+                <td>{(device.lastData.baromrelin)*33.86.toFixed()} hPa</td>
               </tr>
               )}
             </table>
