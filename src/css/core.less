@@ -47,32 +47,53 @@ body {
             justify-content: center;
             align-items: center;
             .data {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
                 h2 {
                     font-family: 'Crafty Girls', cursive;
                 }
                 .location {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    h3 {
+                    span {
                         font-family: 'The Girl Next Door', cursive;
-                        padding: .5em;
+                        font-weight: bold;
+                        font-size: 1.2em;
                     }
                 }
             }
-            table {
-                border: 3px groove #2f4f4f;
-                tr {
-                    th {
-                        border: 1px solid #2f4f4f;
-                        background-color: #b0c4de;
-                        padding: .2em 1em;
-                    }
-                    td {
-                        border: 1px solid #2f4f4f;
-                        padding: .2em 1em;
-                        text-align: center;
+            .current {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: 'The Girl Next Door', cursive;
+                h3 {
+                    padding: 0 1em;
+                }
+            }
+            .conditions {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                table {
+                    border: 3px groove #2f4f4f;
+                    tr {
+                        th {
+                            border: 1px solid #2f4f4f;
+                            background-color: #b0c4de;
+                            padding: .2em 1em;
+                        }
+                        td {
+                            border: 1px solid #2f4f4f;
+                            padding: .2em 1em;
+                            text-align: center;
+                        }
                     }
                 }
             }

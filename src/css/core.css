@@ -56,28 +56,51 @@ body #main .station {
   justify-content: center;
   align-items: center;
 }
-body #main .station .data h2 {
-  font-family: 'Crafty Girls', cursive;
-}
-body #main .station .data .location {
+body #main .station .data {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body #main .station .data .location h3 {
-  font-family: 'The Girl Next Door', cursive;
-  padding: 0.5em;
+body #main .station .data h2 {
+  font-family: 'Crafty Girls', cursive;
 }
-body #main .station table {
+body #main .station .data .location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .station .data .location span {
+  font-family: 'The Girl Next Door', cursive;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+body #main .station .current {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'The Girl Next Door', cursive;
+}
+body #main .station .current h3 {
+  padding: 0 1em;
+}
+body #main .station .conditions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .station .conditions table {
   border: 3px groove #2f4f4f;
 }
-body #main .station table tr th {
+body #main .station .conditions table tr th {
   border: 1px solid #2f4f4f;
   background-color: #b0c4de;
   padding: 0.2em 1em;
 }
-body #main .station table tr td {
+body #main .station .conditions table tr td {
   border: 1px solid #2f4f4f;
   padding: 0.2em 1em;
   text-align: center;
