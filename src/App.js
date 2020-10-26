@@ -6,7 +6,7 @@ import Home from './components/Home'
 import HbStationCard from './components/HbStationCard'
 import PjrStationCard from './components/PjrStationCard'
 // import DateCard from './components/DateCard'
-import HbHistoryCard from './components/HbHistoryCard'
+import HbHistoryCard from './components/history/HbHistoryCard'
 
 function App() {
 
