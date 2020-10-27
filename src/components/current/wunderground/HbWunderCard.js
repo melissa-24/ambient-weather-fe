@@ -17,6 +17,10 @@ function Wunderground() {
       .catch((err) => console.error(err))
   }, [url])
 
+  if (!data.imperial) {
+    return null
+  }
+
     return (
       <div className='wunderground'>
           <h5>WunderGround Data</h5>

@@ -11,7 +11,7 @@ function CurrentCard() {
       <>
         <PWS />
         <Wunderground />
-        {/* <OpenWeather /> */}
+        <OpenWeather />
       </>
     );
 };

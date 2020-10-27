@@ -2,41 +2,62 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
-function PWS() {
+function OpenWeather() {
   
   const [data, setData] = useState([])
 
-  let url = 'https://api.ambientweather.net/v1/devices?applicationKey=eaee43c48057495682fb4d792385ea89dcba83f9d05b428cb64273945d167ed6&apiKey=8539ff0909864ea78810993651057188b5b6a88eb8194e69a9aa119825a4e804'
+  let url = 'https://api.openweathermap.org/data/2.5/onecall?lat=41.59048079999999&lon=-73.8628047&exclude={part}&appid=e2dce74ca5407e4678b17b94a72fe7df'
 
   useEffect(() => {
     axios
       .get(url)
       .then((res) => setData(res.data))
+      // .then((res) => console.log(res.data))
       .catch((err) => console.error(err))
   }, [url])
 
+  if (!data.current) {
+    return null
+  }
+
     return (
-      <>
-          {data.map(device => 
+      <div className='pws'>
+        <h5>Open Weather</h5>
+        <h5>This is data pulled from a Open Weather Database</h5>
+        {console.log('OwCard: OpenWeather Data', data)}
+        {console.log('get test:', data.current.temp)}
             <table>
               <tr className='head'>
-                <th>Date:</th>
-                <th>Time:</th>
-                <th>Outside Temp:</th>
-                <th>Inside Temp:</th>
-                <th>Daily Rain:</th>
+                <th></th>
+                <th>Temp:</th>
+                <th>Feels Like:</th>
+                <th>Humidity:</th>
+                <th>Dew Point:</th>
+                <th>Pressure:</th>
               </tr>
-              <tr>
-                <td>{device.lastData.date.substr(5, 5)}-{device.lastData.date.substr(0, 4)}</td>
-                <td>{device.lastData.date.substr(11, 5)}</td>
-                <td>{device.lastData.tempf}&#176;</td>
-                <td>{device.lastData.tempinf}&#176;</td>
-                <td>{device.lastData.dailyrainin}"</td>
-              </tr>
+                <tr>
+                  <th>Current Conditions:</th>
+                  <td>{data.current.temp.toFixed()}&#176;</td>
+                  <td>{data.current.feels_like.toFixed()}&#176;</td>
+                  <td>{data.current.humidity}%</td>
+                  <td>{data.current.dew_point.toFixed()}&#176;</td>
+                  <td>{data.current.pressure} hPa</td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>Cloud Cover:</th>
+                  <th colspan="2">UV Index:</th>
+                  <th colspan="2">Wind Speed:</th>
+                </tr>
+                <tr>
+                  <th>Other Conditions:</th>
+                  <td>{data.current.clouds}%</td>
+                  <td colspan="2">{(data.current.uvi)}</td>
+                  <td colspan="2">{data.current.wind_speed}mph</td>
+                </tr>
             </table>
-          )}
-      </>
+      </div>
     );
 };
 
-export default PWS
+export default OpenWeather
