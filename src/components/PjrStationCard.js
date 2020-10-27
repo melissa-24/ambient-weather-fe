@@ -17,7 +17,7 @@ function StationCard() {
         </div>
         <div className='conditions'>
           <h3>Current Conditions</h3>
-            {/* <CurrentCard /> */}
+            <CurrentCard />
         </div>
       </div>
       </>

@@ -23,7 +23,7 @@ function StationName() {
             <div className='location'>
               <span>Location: {device.info.coords.address}</span>
               <span>Time Zone: {device.lastData.tz}</span>
-              <span>Elevation: {(device.info.coords.elevation).toFixed()} Above Sea Level</span>
+              <span>Elevation: {(device.info.coords.elevation).toFixed()}ft Above Sea Level</span>
               <span>Wunderground Station ID: <ID /></span>
             </div>
           )}

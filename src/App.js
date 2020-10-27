@@ -6,7 +6,7 @@ import Home from './components/Home'
 import HbStationCard from './components/HbStationCard'
 import PjrStationCard from './components/PjrStationCard'
 // import DateCard from './components/DateCard'
-import HbHistoryCard from './components/history/HbHistoryCard'
+// import HbHistoryCard from './components/history/HbHistoryCard'
 // import TestCard from './components/TestCard'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Link to='/'>Home</Link>
           <Link to='/honeybee-station'>Melissa's Station</Link>
           <Link to='/paynejr-station'>Payne JR's Station</Link>
-          <Link to='/honeybee-history'>Melissa's 30 Day Weather History</Link>
+          {/* <Link to='/honeybee-history'>Melissa's 30 Day Weather History</Link> */}
           {/* <Link to='/testing'>Testing</Link> */}
         </nav>
       </header>
@@ -34,9 +34,9 @@ function App() {
         {/* <Route path='/testing'>
           <TestCard />
         </Route> */}
-        <Route path='/honeybee-history'>
+        {/* <Route path='/honeybee-history'>
           <HbHistoryCard />
-        </Route>
+        </Route> */}
         <Route exact path='/'>
           <Home />
         </Route>
