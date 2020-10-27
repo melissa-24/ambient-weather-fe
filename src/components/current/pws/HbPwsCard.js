@@ -19,6 +19,8 @@ function PWS() {
     return (
       <div className='pws'>
         <h5>Personal Weather Station</h5>
+        <h5>This is data pulled right off the weather station at the home</h5>
+        {console.log(data)}
             <table>
               <tr className='head'>
                 <th>Date:</th>
