@@ -9,7 +9,7 @@ function CurrentCard() {
 
     return (
       <>
-        {/* <PWS /> */}
+        <PWS />
         {/* <Wunderground /> */}
         {/* <OpenWeather /> */}
       </>
