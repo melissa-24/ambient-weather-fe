@@ -20,19 +20,26 @@ function Wunderground() {
     return (
       <div className='wunderground'>
           <h5>WunderGround Data</h5>
-          <h5>This data is pull from Wunderground.com which is getting it's data from the Personal Weather Staion</h5>
+          <h5>This data is pull from Wunderground.com</h5>
+          <h5>Data comes from the above Personal Weather Station, plus others</h5>
           {/* {data.map(station => <p>{station.stationID}</p>)} */}
-          {console.log(data)}
+          {console.log('WunderCard: Wunderground Data', data)}
           {/* {data.stationID} */}
             <table>
               <tr className='head'>
-                <th>Date:</th>
-                <th>Outside Temp:</th>
+                <th>Temp:</th>
+                <th>Heat Index:</th>
+                <th>Wind Chill:</th>
+                <th>Humidity:</th>
+                <th>Dew Point:</th>
                 <th>Pressure:</th>
               </tr>
               <tr>
-                <td>{data.obsTimeLocal.substr(5, 5)}-{data.obsTimeLocal.substr(0, 4)}</td>
                 <td>{data.imperial.temp}&#176;</td>
+                <td>{data.imperial.heatIndex}&#176;</td>
+                <td>{data.imperial.windChill}&#176;</td>
+                <td>{data.humidity}&#176;</td>
+                <td>{data.imperial.dewpt}&#176;</td>
                 <td>{(data.imperial.pressure)*33.86.toFixed()} hPa</td>
               </tr>
             </table>
