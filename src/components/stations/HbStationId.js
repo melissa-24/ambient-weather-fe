@@ -19,6 +19,7 @@ function StationId() {
     return (
       <>
         <span>{data.stationID}</span>
+        {console.log('StattionId: Wunderground Data', data)}
       </>
     );
 };
