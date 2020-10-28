@@ -16,9 +16,9 @@ function PWS() {
       .catch((err) => console.error(err))
   }, [url])
 
-  if (!data.lastData) {
-    return null
-  }
+  // if (!data.lastData) {
+  //   return null
+  // }
 
     return (
       <div className='pws'>

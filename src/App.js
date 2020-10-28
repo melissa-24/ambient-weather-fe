@@ -3,40 +3,48 @@ import { Link, Switch, Route } from 'react-router-dom'
 import './css/core.css'
 
 import Home from './components/Home'
-import HbStationCard from './components/HbStationCard'
 import PjrStationCard from './components/PjrStationCard'
-// import DateCard from './components/DateCard'
-// import HbHistoryCard from './components/history/HbHistoryCard'
-// import TestCard from './components/TestCard'
+import HbStationCard from './components/HbStationCard'
+import JpStationCard from './components/JpStationCard'
+import MpStationCard from './components/MpSationCard'
+import ApStationCard from './components/ApStationCard'
+import CpStationCard from './components/CpStationCard'
 
 function App() {
 
     return (
       <>
       <header>
-        <h1>Family Weather</h1>
+        <h1>The Payne Nut House Family Weather</h1>
         <nav>
           <Link to='/'>Home</Link>
-          <Link to='/honeybee-station'>Melissa's Station</Link>
-          <Link to='/paynejr-station'>Payne JR's Station</Link>
-          {/* <Link to='/honeybee-history'>Melissa's 30 Day Weather History</Link> */}
-          {/* <Link to='/testing'>Testing</Link> */}
+          <Link to='/paynejr-station'>Payne JR's Weather</Link>
+          <Link to='/honeybee-station'>Melissa's Weatehr</Link>
+          <Link to='/josh-weather'>Joshua's Weather</Link>
+          <Link to='/melanie-weather'>Melanie's Weather</Link>
+          <Link to='/anthony-weather'>Anthony's Weather</Link>
+          <Link to='/christopher-weather'>Christophers's Weather</Link>
         </nav>
       </header>
       <Switch>
+      <Route path='/paynejr-station'>
+          <PjrStationCard />
+        </Route>
         <Route path='/honeybee-station'>
           <HbStationCard />
         </Route>
-        <Route path='/paynejr-station'>
-          <PjrStationCard />
-          {/* <DateCard /> */}
+        <Route path='/josh-weather'>
+          <JpStationCard />
         </Route>
-        {/* <Route path='/testing'>
-          <TestCard />
-        </Route> */}
-        {/* <Route path='/honeybee-history'>
-          <HbHistoryCard />
-        </Route> */}
+        <Route path='/melanie-weather'>
+          <MpStationCard />
+        </Route>
+        <Route path='/anthoney-weather'>
+          <ApStationCard />
+        </Route>
+        <Route path='/christopher-weather'>
+          <CpStationCard />
+        </Route>
         <Route exact path='/'>
           <Home />
         </Route>

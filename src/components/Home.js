@@ -1,4 +1,5 @@
 import React from 'react'
+import tree from '../images/tree.png'
 
 class Home extends React.Component {
 
@@ -12,6 +13,10 @@ class Home extends React.Component {
                 </p>
                 <p>
                     Now some of us have Personal Weather Stations.  However we don't all live in the same home, town or even state anymore.  So creating a central place to look at the weather that we are reporting is the basis behind the site.  More stations or alternate ways to get the data from every member will be added.  For now click the links to see what the weather is like for the family.
+                </p>
+                <p>
+                    Here is our Family = As the GrandChildren move away I am sure we will add to the locations where we track weather
+                    <img src={tree} alt="" />
                 </p>
             </div>
             </>
