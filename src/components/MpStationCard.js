@@ -10,6 +10,7 @@ function StationCard() {
       <>
       <div className='station'>
         <h2>Melanie's Weather</h2>
+        <h3>Or Close by</h3>
         <div className='data'>
           <StationName />
         </div>
