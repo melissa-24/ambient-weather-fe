@@ -2,7 +2,7 @@ import React from 'react'
 
 // import PWS from './pws/PjrPwsCard'
 import OpenWeather from './openweather/PjrOwCard'
-// import Wunderground from './wunderground/PjrWunderCard'
+import Wunderground from './wunderground/PjWunderCard'
 
 function CurrentCard() {
   
@@ -10,7 +10,7 @@ function CurrentCard() {
     return (
       <>
         {/* <PWS /> */}
-        {/* <Wunderground /> */}
+        <Wunderground />
         <OpenWeather />
       </>
     );

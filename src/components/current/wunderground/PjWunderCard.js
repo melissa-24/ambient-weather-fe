@@ -1,42 +1,51 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const { REACT_APP_PJR_CUR_WUND_URL } = process.env
 
-function PWS() {
+function Wunderground() {
   
   const [data, setData] = useState([])
 
-  let url = 'https://api.ambientweather.net/v1/devices?applicationKey=eaee43c48057495682fb4d792385ea89dcba83f9d05b428cb64273945d167ed6&apiKey=8539ff0909864ea78810993651057188b5b6a88eb8194e69a9aa119825a4e804'
-
   useEffect(() => {
     axios
-      .get(url)
-      .then((res) => setData(res.data))
+      .get(REACT_APP_PJR_CUR_WUND_URL)
+      .then((res) => setData(res.data.observations[0]))
       .catch((err) => console.error(err))
-  }, [url])
+  }, [])
+
+  if (!data.imperial) {
+    return null
+  }
 
     return (
-      <>
-          {data.map(device => 
+      <div className='wunderground'>
+          <h5>WunderGround Data</h5>
+          <h5>This data is pull from Wunderground.com</h5>
+          <h5>Data comes from the above Personal Weather Station, plus others</h5>
+          {/* {data.map(station => <p>{station.stationID}</p>)} */}
+          {console.log('WunderCard: Wunderground Data', data)}
+          {/* {data.stationID} */}
             <table>
               <tr className='head'>
-                <th>Date:</th>
-                <th>Time:</th>
-                <th>Outside Temp:</th>
-                <th>Inside Temp:</th>
-                <th>Daily Rain:</th>
+                <th>Temp:</th>
+                <th>Heat Index:</th>
+                <th>Wind Chill:</th>
+                <th>Humidity:</th>
+                <th>Dew Point:</th>
+                <th>Pressure:</th>
               </tr>
               <tr>
-                <td>{device.lastData.date.substr(5, 5)}-{device.lastData.date.substr(0, 4)}</td>
-                <td>{device.lastData.date.substr(11, 5)}</td>
-                <td>{device.lastData.tempf}&#176;</td>
-                <td>{device.lastData.tempinf}&#176;</td>
-                <td>{device.lastData.dailyrainin}"</td>
+                <td>{data.imperial.temp}&#176;</td>
+                <td>{data.imperial.heatIndex}&#176;</td>
+                <td>{data.imperial.windChill}&#176;</td>
+                <td>{data.humidity}&#176;</td>
+                <td>{data.imperial.dewpt}&#176;</td>
+                <td>{(data.imperial.pressure)*33.86.toFixed()} hPa</td>
               </tr>
             </table>
-          )}
-      </>
+      </div>
     );
 };
 
-export default PWS
+export default Wunderground

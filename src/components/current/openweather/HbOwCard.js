@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const {REACT_APP_OPEN_HB_URL} = process.env
 
 function OpenWeather() {
   
   const [data, setData] = useState([])
 
-  let url = 'https://api.openweathermap.org/data/2.5/onecall?lat=41.0545292&lon=-76.23326759999999&exclude={part}&units=imperial&appid=e2dce74ca5407e4678b17b94a72fe7df'
-
   useEffect(() => {
     axios
-      .get(url)
+      .get(REACT_APP_OPEN_HB_URL)
       .then((res) => setData(res.data))
       // .then((res) => console.log(res.data))
       .catch((err) => console.error(err))
-  }, [url])
+  }, [])
 
   if (!data.current) {
     return null

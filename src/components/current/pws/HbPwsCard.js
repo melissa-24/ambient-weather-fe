@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const { REACT_APP_HB_CUR_AMB_URL } = process.env
 
 function PWS() {
   
   const [data, setData] = useState([])
 
-  let url = 'https://api.ambientweather.net/v1/devices?applicationKey=eaee43c48057495682fb4d792385ea89dcba83f9d05b428cb64273945d167ed6&apiKey=8539ff0909864ea78810993651057188b5b6a88eb8194e69a9aa119825a4e804'
-
   useEffect(() => {
     axios
-      .get(url)
+      .get(REACT_APP_HB_CUR_AMB_URL)
       .then((res) => setData(res.data))
       // .then((res) => console.log(res.data))
       .catch((err) => console.error(err))
-  }, [url])
-
-  if (!data.lastData) {
-    return null
-  }
+  }, [])
 
     return (
       <div className='pws'>
