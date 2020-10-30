@@ -1,7 +1,7 @@
 import React from 'react'
 
 import StationName from './stations/MpStationName'
-// import CurrentCard from './current/HbCurrentCard'
+import CurrentCard from './current/MpCurrentCard'
 import CurrentTime from './current/CurrentTime'
 
 function StationCard() {
@@ -18,7 +18,7 @@ function StationCard() {
         </div>
         <div className='conditions'>
           <h3>Current Conditions</h3>
-            {/* <CurrentCard /> */}
+            <CurrentCard />
         </div>
       </div>
       </>

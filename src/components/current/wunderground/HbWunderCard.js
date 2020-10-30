@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const { REACT_APP_HB_CUR_WUND_URL } = process.env
 
 function Wunderground() {
   
   const [data, setData] = useState([])
 
-  let url = 'https://api.weather.com/v2/pws/observations/current?stationId=KPABERWI22&format=json&units=e&apiKey=2e728fdc6fe646aeb28fdc6fe626aecd'
-
-
   useEffect(() => {
     axios
-      .get(url)
+      .get(REACT_APP_HB_CUR_WUND_URL)
       // .then((res) => console.log(res.data))
     .then((res) => setData(res.data.observations[0]))
       .catch((err) => console.error(err))
-  }, [url])
+  }, [])
 
   if (!data.imperial) {
     return null

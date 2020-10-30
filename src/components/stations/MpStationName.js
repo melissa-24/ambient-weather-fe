@@ -1,10 +1,11 @@
+// import React, {useState, useEffect } from 'react'
 import React from 'react'
+// import axios from 'axios'
 
+// import Id from './stationId/MpStationId'
 
 function StationName() {
   
-
-
     return (
       <>
           <h2>Thompsons Station Station</h2>
