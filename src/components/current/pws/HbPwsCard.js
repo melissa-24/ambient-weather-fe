@@ -15,6 +15,10 @@ function PWS() {
       .catch((err) => console.error(err))
   }, [])
 
+  if (data.lastData) {
+    return null
+  }
+
     return (
       <div className='pws'>
         <h5>Personal Weather Station</h5>

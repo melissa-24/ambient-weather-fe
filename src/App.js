@@ -19,7 +19,7 @@ function App() {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/paynejr-station'>Payne JR's Weather</Link>
-          <Link to='/honeybee-station'>Melissa's Weatehr</Link>
+          <Link to='/honeybee-station'>Melissa's Weather</Link>
           <Link to='/josh-weather'>Joshua's Weather</Link>
           <Link to='/melanie-weather'>Melanie's Weather</Link>
           <Link to='/anthony-weather'>Anthony's Weather</Link>
