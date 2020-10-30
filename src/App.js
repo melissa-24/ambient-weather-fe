@@ -6,7 +6,7 @@ import Home from './components/Home'
 import PjrStationCard from './components/PjrStationCard'
 import HbStationCard from './components/HbStationCard'
 import JpStationCard from './components/JpStationCard'
-import MpStationCard from './components/MpSationCard'
+import MpStationCard from './components/MpStationCard'
 import ApStationCard from './components/ApStationCard'
 import CpStationCard from './components/CpStationCard'
 
@@ -39,7 +39,7 @@ function App() {
         <Route path='/melanie-weather'>
           <MpStationCard />
         </Route>
-        <Route path='/anthoney-weather'>
+        <Route path='/anthony-weather'>
           <ApStationCard />
         </Route>
         <Route path='/christopher-weather'>
