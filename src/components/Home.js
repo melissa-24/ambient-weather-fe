@@ -16,8 +16,8 @@ class Home extends React.Component {
                 </p>
                 <p>
                     Here is our Family = As the GrandChildren move away I am sure we will add to the locations where we track weather
-                    <img src={tree} alt="" />
                 </p>
+                <img src={tree} alt="" />
             </div>
             </>
         )

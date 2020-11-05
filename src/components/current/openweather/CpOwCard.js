@@ -20,13 +20,42 @@ function OpenWeather() {
   }
 
     return (
-      <div className='pws'>
+      <div className='openweather'>
         <h5>Open Weather</h5>
-        <h5>This is data pulled from a Open Weather Database</h5>
-        {console.log('OwCard: OpenWeather Data', data)}
-        {console.log('get test:', data.current.temp)}
-            <table>
-              <tr className='head'>
+            <table className='mobile'>
+              <tr>
+                <th colspan="2">Current Conditions:</th>
+                <th colspan="2">Other Conditions:</th>
+              </tr>
+              <tr>
+                <th>Temp:</th>
+                <td>{data.current.temp.toFixed()}&#176;</td>
+                <th rowspan="2">Cloud Cover:</th>
+                <td rowspan="2">{data.current.clouds}%</td>
+              </tr>
+              <tr>
+              <th>Feels Like:</th>
+              <td>{data.current.feels_like.toFixed()}&#176;</td>
+              </tr>
+              <tr>
+              <th>Humidity:</th>
+              <td>{data.current.humidity}%</td>
+              <th rowspan="2">UV Index:</th>
+              <td rowspan="2">{(data.current.uvi)}</td>
+              </tr>
+              <tr>
+              <th>Dew Point:</th>
+              <td>{data.current.dew_point.toFixed()}&#176;</td>
+              </tr>
+              <tr>
+              <th>Pressure:</th>
+              <td>{data.current.pressure} hPa</td>
+              <th>Wind Speed:</th>
+              <td>{data.current.wind_speed}mph</td>
+              </tr>
+            </table>
+            <table className='desktop'>
+              <tr>
                 <th></th>
                 <th>Temp:</th>
                 <th>Feels Like:</th>

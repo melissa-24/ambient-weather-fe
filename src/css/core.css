@@ -20,35 +20,52 @@ body #main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  letter-spacing: 0.2em;
 }
 body #main header h1 {
   font-family: 'Crafty Girls', cursive;
   text-align: center;
+  font-size: 1.2em;
 }
 body #main header nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: #163549b3;
+  margin: 0.2em;
 }
-body #main header nav a {
+body #main header nav .nav-button {
+  background-color: #163549;
+  color: white;
   font-family: 'The Girl Next Door', cursive;
-  padding: 0.5em;
+  font-size: 1.1em;
+  border-radius: 15%;
+}
+body #main header nav .nav-option {
+  font-family: 'The Girl Next Door', cursive;
   font-size: 1.3em;
+  color: white;
 }
 body #main .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 body #main .about h1 {
   font-family: 'Crafty Girls', cursive;
+  font-size: 1.2em;
 }
 body #main .about p {
   font-family: 'The Girl Next Door', cursive;
-  width: 40%;
+  font-size: 1.2em;
+}
+body #main .about img {
+  width: 85%;
+  margin: 0.2em;
 }
 body #main .station {
   display: flex;
@@ -56,14 +73,19 @@ body #main .station {
   justify-content: center;
   align-items: center;
 }
+body #main .station h2 {
+  font-family: 'Crafty Girls', cursive;
+  font-size: 1.2em;
+}
 body #main .station .data {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 body #main .station .data h2 {
-  font-family: 'Crafty Girls', cursive;
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 1em;
 }
 body #main .station .data .location {
   display: flex;
@@ -74,17 +96,17 @@ body #main .station .data .location {
 body #main .station .data .location span {
   font-family: 'The Girl Next Door', cursive;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 body #main .station .current {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'The Girl Next Door', cursive;
 }
 body #main .station .current h3 {
-  padding: 0 1em;
+  font-size: 1em;
 }
 body #main .station .conditions {
   display: flex;
@@ -92,15 +114,74 @@ body #main .station .conditions {
   justify-content: center;
   align-items: center;
 }
-body #main .station .conditions table {
+body #main .station .conditions nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body #main .station .conditions nav a {
+  font-family: 'The Girl Next Door', cursive;
+  padding: 0.5em;
+  font-size: 1.3em;
+}
+body #main .station .conditions .wunderground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .station .conditions .wunderground table {
   border: 3px groove #2f4f4f;
 }
-body #main .station .conditions table tr th {
+body #main .station .conditions .wunderground table tr th {
   border: 1px solid #2f4f4f;
   background-color: #b0c4de;
   padding: 0.2em 1em;
 }
-body #main .station .conditions table tr td {
+body #main .station .conditions .wunderground table tr td {
+  border: 1px solid #2f4f4f;
+  padding: 0.2em 1em;
+  text-align: center;
+}
+body #main .station .conditions .wunderground .desktop {
+  display: none;
+}
+body #main .station .conditions .openweather table {
+  border: 3px groove #2f4f4f;
+}
+body #main .station .conditions .openweather table tr th {
+  border: 1px solid #2f4f4f;
+  background-color: #b0c4de;
+  padding: 0.2em 0.5em;
+}
+body #main .station .conditions .openweather table tr td {
+  border: 1px solid #2f4f4f;
+  padding: 0.2em 0.5em;
+  text-align: center;
+}
+body #main .station .conditions .openweather .desktop {
+  display: none;
+}
+body #main .forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #main .forecast h2 {
+  font-family: 'Crafty Girls', cursive;
+}
+body #main .forecast table {
+  border: 3px groove #2f4f4f;
+}
+body #main .forecast table tr th {
+  border: 1px solid #2f4f4f;
+  background-color: #b0c4de;
+  padding: 0.2em 1em;
+}
+body #main .forecast table tr td {
   border: 1px solid #2f4f4f;
   padding: 0.2em 1em;
   text-align: center;
@@ -129,4 +210,135 @@ body #main .history table tr td {
 }
 body #main footer {
   font-family: 'The Girl Next Door', cursive;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 400px) {
+  body #main header h1 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 530px) {
+  body #main header h1 {
+    font-size: 1.8em;
+  }
+  body #main footer {
+    flex-direction: row;
+  }
+  body #main footer p {
+    padding: 0.2em;
+  }
+}
+@media only screen and (min-width: 730px) {
+  body #main header h1 {
+    font-size: 2em;
+  }
+  body #main header nav .nav-button {
+    font-size: 1.3em;
+  }
+  body #main .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  body #main .about h1 {
+    font-family: 'Crafty Girls', cursive;
+  }
+  body #main .about p {
+    font-family: 'The Girl Next Door', cursive;
+    width: 85%;
+    font-size: 1.2em;
+  }
+  body #main .about img {
+    width: auto;
+  }
+  body #main .station {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main .station h2 {
+    font-family: 'Crafty Girls', cursive;
+  }
+  body #main .station .data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main .station .data h2 {
+    font-family: 'The Girl Next Door', cursive;
+  }
+  body #main .station .data .location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main .station .data .location span {
+    font-family: 'The Girl Next Door', cursive;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  body #main .station .current {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'The Girl Next Door', cursive;
+  }
+  body #main .station .current h3 {
+    padding: 0 1em;
+  }
+  body #main .station .conditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main .station .conditions nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main .station .conditions nav a {
+    font-family: 'The Girl Next Door', cursive;
+    padding: 0.5em;
+    font-size: 1.3em;
+  }
+  body #main .station .conditions .wunderground {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body #main .station .conditions .wunderground .desktop {
+    display: block;
+  }
+  body #main .station .conditions .wunderground .mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 850px) {
+  body #main header h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body #main header h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 1330px) {
+  body #main header h1 {
+    font-size: 2em;
+  }
 }

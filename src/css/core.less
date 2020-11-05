@@ -10,21 +10,32 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        letter-spacing: .2em;
         header {
             h1 {
                 font-family: 'Crafty Girls', cursive;
                 text-align: center;
+                font-size: 1.2em;
             }
             nav {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                a {
+                background-color: #163549b3;
+                margin: .2em;
+                .nav-button {
+                    background-color: #163549;
+                    color: white;
                     font-family: 'The Girl Next Door', cursive;
-                    padding: .5em;
+                    font-size: 1.1em;
+                    border-radius: 15%;
+                }
+                .nav-option {
+                    font-family: 'The Girl Next Door', cursive;
                     font-size: 1.3em;
+                    color: white;
                 }
             }
         }
@@ -33,12 +44,18 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             h1 {
                 font-family: 'Crafty Girls', cursive;
+                font-size: 1.2em;
             }
             p {
                 font-family: 'The Girl Next Door', cursive;
-                width: 40%;
+                font-size: 1.2em;
+            }
+            img {
+                width: 85%;
+                margin: .2em;
             }
         }
         .station {
@@ -46,13 +63,18 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            h2 {
+                font-family: 'Crafty Girls', cursive;
+                font-size: 1.2em;
+            }
             .data {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 h2 {
-                    font-family: 'Crafty Girls', cursive;
+                    font-family: 'The Girl Next Door', cursive;
+                    font-size: 1em;
                 }
                 .location {
                     display: flex;
@@ -62,18 +84,18 @@ body {
                     span {
                         font-family: 'The Girl Next Door', cursive;
                         font-weight: bold;
-                        font-size: 1.2em;
+                        font-size: 1em;
                     }
                 }
             }
             .current {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 font-family: 'The Girl Next Door', cursive;
                 h3 {
-                    padding: 0 1em;
+                    font-size: 1em;;
                 }
             }
             .conditions {
@@ -81,19 +103,88 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                table {
-                    border: 3px groove #2f4f4f;
-                    tr {
-                        th {
-                            border: 1px solid #2f4f4f;
-                            background-color: #b0c4de;
-                            padding: .2em 1em;
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        font-family: 'The Girl Next Door', cursive;
+                        padding: .5em;
+                        font-size: 1.3em;
+                    }
+                }
+                .wunderground {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    table {
+                        border: 3px groove #2f4f4f;
+                        tr {
+                            th {
+                                border: 1px solid #2f4f4f;
+                                background-color: #b0c4de;
+                                padding: .2em 1em;
+                            }
+                            td {
+                                border: 1px solid #2f4f4f;
+                                padding: .2em 1em;
+                                text-align: center;
+                            }
                         }
-                        td {
-                            border: 1px solid #2f4f4f;
-                            padding: .2em 1em;
-                            text-align: center;
+                    }
+                    .desktop {
+                        display: none;
+                    }
+                }
+                .openweather {
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // align-items: center;
+                    table {
+                        border: 3px groove #2f4f4f;
+                        tr {
+                            th {
+                                border: 1px solid #2f4f4f;
+                                background-color: #b0c4de;
+                                padding: .2em .5em;
+                            }
+                            td {
+                                border: 1px solid #2f4f4f;
+                                padding: .2em .5em;
+                                text-align: center;
+                            }
                         }
+                    }
+                    .desktop {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .forecast {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                font-family: 'Crafty Girls', cursive;
+            }
+            table {
+                border: 3px groove #2f4f4f;
+                tr {
+                    th {
+                        border: 1px solid #2f4f4f;
+                        background-color: #b0c4de;
+                        padding: .2em 1em;
+                    }
+                    td {
+                        border: 1px solid #2f4f4f;
+                        padding: .2em 1em;
+                        text-align: center;
                     }
                 }
             }
@@ -124,6 +215,14 @@ body {
         }
         footer {
             font-family: 'The Girl Next Door', cursive;
+            font-size: 1.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
         }
     }
 }
+
+@import './media.less';

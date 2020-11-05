@@ -9,7 +9,7 @@ function StationCard() {
     return (
       <>
       <div className='station'>
-        <h2>Nut House Central's Weather</h2>
+        <h2>Weather at Nut House Central</h2>
         <div className='data'>
           <StationName />
         </div>
@@ -17,8 +17,7 @@ function StationCard() {
           <CurrentTime />
         </div>
         <div className='conditions'>
-          <h3>Current Conditions</h3>
-            <CurrentCard />
+          <CurrentCard />
         </div>
       </div>
       </>
