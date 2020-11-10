@@ -22,7 +22,8 @@ function Forecast() {
     return (
         <div className='forecast'>
         <h2>Local 5 Day Forecast</h2>
-        <span>{data.moonPhase.[0]}</span>
+        {console.log('PJR Forecast', data)}
+        {/* <span>{data.moonPhase.[0]}</span> */}
         <table>
             <tr>
                 <th></th>

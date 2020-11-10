@@ -21,6 +21,7 @@ function Wunderground() {
     return (
       <div className='wunderground'>
           <h5>WunderGround Data = Current Conditions</h5>
+          {console.log('PJR Wunerground Current', data)}
             <table className='desktop'>
               <tr>
                 <th>Temp:</th>

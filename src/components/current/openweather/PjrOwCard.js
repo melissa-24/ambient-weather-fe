@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const { REACT_APP_OPEN_PJR_URL } = process.env
+const { REACT_APP_PJR_OW_URL } = process.env
 
 function OpenWeather() {
   
@@ -9,7 +9,7 @@ function OpenWeather() {
 
   useEffect(() => {
     axios
-      .get(REACT_APP_OPEN_PJR_URL)
+      .get(REACT_APP_PJR_OW_URL)
       .then((res) => setData(res.data))
       // .then((res) => console.log(res.data))
       .catch((err) => console.error(err))
