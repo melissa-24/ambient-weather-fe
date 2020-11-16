@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.ambient-weather",
+  "appId": "io.ionic.honeybees-weather",
   "appName": "ambient-weather",
   "bundledWebRuntime": false,
   "npmClient": "npm",
