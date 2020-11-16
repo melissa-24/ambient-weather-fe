@@ -12,8 +12,7 @@ function CurrentCard() {
     return (
       <>
       <nav>
-      <Link to='joshua-forecast'>Forecast</Link>
-          {/* <Link to='joshua-history'>30 Day History</Link> */}
+      <Link to='joshua-extras'>Forecasts and Historical Data</Link>
       </nav>
         {/* <PWS /> */}
         <Wunderground />

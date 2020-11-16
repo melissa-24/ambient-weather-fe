@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
 
-const { REACT_APP_PJR_HIST_WUND_URL } = process.env
+const { REACT_APP_CP_HIST_WUND_URL } = process.env
 
 function History() {
 
@@ -10,7 +10,7 @@ function History() {
 
     useEffect(() => {
         axios
-            .get(REACT_APP_PJR_HIST_WUND_URL)
+            .get(REACT_APP_CP_HIST_WUND_URL)
             .then((res) => setData(res.data.summaries))
             .catch((err) => console.log(err))
     }, [])
@@ -22,7 +22,7 @@ function History() {
     return (
         <div className='forecast'>
         <h2>7 Day History</h2>
-        {console.log('PJR History Data', data)}
+        {console.log('CP History Data', data)}
         <table>
             <tr>
                 <th></th>

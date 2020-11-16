@@ -11,11 +11,10 @@ function CurrentCard() {
     return (
       <>
       <nav>
-        <Link to='melanie-forecast'>Forecast</Link>
-        {/* <Link to='melanie-history'>30 Day History</Link> */}
+        <Link to='melanie-extras'>Forecasts and Historical Data</Link>
       </nav>
         {/* <PWS /> */}
-        {/* <Wunderground /> */}
+        <Wunderground />
         <OpenWeather />
       </>
     );

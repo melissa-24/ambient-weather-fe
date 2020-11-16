@@ -13,6 +13,11 @@ import ApStationCard from './components/ApStationCard'
 import CpStationCard from './components/CpStationCard'
 
 import PjrExtras from './components/extras/PjrExtras'
+import HbExtras from './components/extras/HbExtras'
+import JpExtras from './components/extras/JpExtras'
+import MpExtras from './components/extras/MpExtras'
+import ApExtras from './components/extras/ApExtras'
+import CpExtras from './components/extras/CpExtras'
 
 function App() {
 
@@ -32,17 +37,32 @@ function App() {
             <Route path="/Melissa's">
               <HbStationCard />
             </Route>
+            <Route path='/melissa-extras'>
+              <HbExtras />
+            </Route>
             <Route path="/Joshua's">
               <JpStationCard />
+            </Route>
+            <Route path='/joshua-extras'>
+              <JpExtras />
             </Route>
             <Route path="/Melanie's">
               <MpStationCard />
             </Route>
+            <Route path='/melanie-extras'>
+              <MpExtras />
+            </Route>
             <Route path="/Anthony's">
               <ApStationCard />
             </Route>
+            <Route path='/anthony-extras'>
+              <ApExtras />
+            </Route>
             <Route path="/Christopher's">
               <CpStationCard />
+            </Route>
+            <Route path='/christopher-extras'>
+              <CpExtras />
             </Route>
             <Route exact path='/'>
               <Home />

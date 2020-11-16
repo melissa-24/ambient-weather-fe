@@ -1,0 +1,7 @@
+{
+    "name": "amient-weather",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

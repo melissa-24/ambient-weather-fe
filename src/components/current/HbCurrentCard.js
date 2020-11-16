@@ -11,8 +11,7 @@ function CurrentCard() {
     return (
       <>
         <nav>
-          <Link to='honeybee-forecast'>Forecast</Link>
-          {/* <Link to='honeybee-history'>30 Day History</Link> */}
+        <Link to='melissa-extras'>Forecasts and Historical Data</Link>
         </nav>
         <PWS />
         <Wunderground />
