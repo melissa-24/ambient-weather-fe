@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import PWS from './pws/HbPwsCard'
+// import PWS from './pws/HbPwsCard'
 import OpenWeather from './openweather/HbOwCard'
 import Wunderground from './wunderground/HbWunderCard'
 
@@ -13,7 +13,7 @@ function CurrentCard() {
         <nav>
         <Link to='melissa-extras'>Forecasts and Historical Data</Link>
         </nav>
-        <PWS />
+        {/* <PWS /> */}
         <Wunderground />
         <OpenWeather />
       </>
