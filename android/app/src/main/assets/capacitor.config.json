@@ -1,8 +1,0 @@
-{
-  "appName": "honeybees-weather",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "build",
-  "cordova": {},
-  "appId": "com.honeybeesweather.app"
-}
