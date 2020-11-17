@@ -16,7 +16,7 @@ function OpenWeather() {
   }, [])
 
   if (!data.current) {
-    return null
+    return <p>Current Open Weather data unavailable at this time</p>
   }
 
     return (

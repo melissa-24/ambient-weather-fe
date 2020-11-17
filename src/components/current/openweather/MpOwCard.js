@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const {REACT_APP_OPEN_MP_URL} = process.env
+const {REACT_APP_MP_OW_URL} = process.env
 
 function OpenWeather() {
   
@@ -9,14 +9,14 @@ function OpenWeather() {
 
   useEffect(() => {
     axios
-      .get(REACT_APP_OPEN_MP_URL)
+      .get(REACT_APP_MP_OW_URL)
       .then((res) => setData(res.data))
       // .then((res) => console.log(res.data))
       .catch((err) => console.error(err))
   }, [])
 
   if (!data.current) {
-    return null
+    return <p>Current Open Weather data unavailable at this time</p>
   }
 
     return (

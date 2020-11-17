@@ -15,7 +15,7 @@ function Forecast() {
             .catch((err) => console.log(err))
     }, [])
 
-    if (data[0]) {
+    if (!data.dayOfWeek) {
         return <p>Forecast Data Unavailable at this time</p>
     }
 
