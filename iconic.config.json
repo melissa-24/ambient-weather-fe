@@ -1,7 +1,0 @@
-{
-    "name": "honeybees-weather",
-    "integrations": {
-      "capacitor": {}
-    },
-    "type": "react"
-  }

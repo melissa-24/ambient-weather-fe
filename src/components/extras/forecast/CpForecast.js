@@ -6,7 +6,7 @@ const { REACT_APP_CP_FOR_WUND_URL } = process.env
 
 function Forecast() {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
 
     useEffect(() => {
         axios

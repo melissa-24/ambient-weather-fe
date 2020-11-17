@@ -1,8 +1,0 @@
-{
-  "appId": "io.ionic.honeybees-weather",
-  "appName": "ambient-weather",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "build",
-  "cordova": {}
-}
